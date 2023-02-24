@@ -37,7 +37,7 @@ export class PersonalComponent implements OnInit, OnChanges {
   }
 
   public onClick() {
-    console.log('emit : ', this.personnes);
+    console.log('ENFANT AVANT Ajout : ', this.personnes);
     // TEST 1 :
     // this.notificationPersonnes.emit([
     //   {
@@ -55,6 +55,7 @@ export class PersonalComponent implements OnInit, OnChanges {
 
     // TEST 3 :
     this.notificationPersonnes.emit(this.personnes.slice());
-    console.log('ENFANT emet');
+
+    console.log('ENFANT Apres Ajout et Emit : ', this.personnes);
   }
 }
